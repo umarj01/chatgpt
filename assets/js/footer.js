@@ -1,0 +1,1 @@
+export function setYear(){ const y=document.querySelector('#year'); if(y) y.textContent = new Date().getFullYear(); }

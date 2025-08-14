@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nmap Essentials — Umar_Hacks</title>
+<meta name="description" content="Nmap Essentials on Umar_Hacks">
+<link rel="canonical" href="https://umar-hacks.example/posts/nmap-essentials/">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+
+<script type="module">
+  import { setActiveNav } from '/assets/js/nav.js';
+  import { setYear } from '/assets/js/footer.js';
+  import { initSearch } from '/assets/js/search.js';
+  import { buildTOC } from '/assets/js/toc.js';
+  import { enableCopy } from '/assets/js/copy.js';
+  import { initTheme } from '/assets/js/theme.js';
+  window.addEventListener('DOMContentLoaded', ()=>{ setActiveNav(); setYear(); initSearch(); buildTOC(); enableCopy(); initTheme(); });
+</script>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:1rem">
+      <a class="logo" href="/">Umar_Hacks</a>
+      <nav aria-label="Primary" class="primary-nav" style="display:flex;gap:.25rem">
+        <a href="/posts/">Posts</a>
+        <a href="/tags/">Tags</a>
+        <a href="/about/">About</a>
+      </nav>
+      <div style="margin-left:auto;display:flex;gap:.5rem;align-items:center">
+        <a class="btn" href="/search/">Search</a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="container" tabindex="-1">
+    
+<article class="post">
+  <header>
+    <h1>Nmap Essentials</h1>
+    <p><time datetime="2025-08-10">Aug 10, 2025</time> • 8 min read · Tags: <a href="/tags/nmap/">nmap</a>, <a href="/tags/recon/">recon</a></p>
+    <img src="/assets/img/nmap-cover.svg" width="1200" height="630" alt="" loading="eager" fetchpriority="high">
+  </header>
+  <div class="layout">
+    <div class="content">
+      
+<p>Scanning networks without authorization is illegal and unethical. Always obtain written permission.</p>
+<h2>Host Discovery</h2>
+<p>Use ping scan to discover live hosts:</p>
+<pre><button class="copy-btn">Copy</button><code>nmap -sn 10.10.10.0/24</code></pre>
+<h2>Fast Scans</h2>
+<p>Top ports help when time is constrained:</p>
+<pre><button class="copy-btn">Copy</button><code>nmap --top-ports 1000 10.10.10.10</code></pre>
+<h2>Version & Default Scripts</h2>
+<pre><button class="copy-btn">Copy</button><code>nmap -sV -sC 10.10.10.10</code></pre>
+<div class="callout info"><strong>Tip:</strong> Combine with <code>-oN</code> to save results.</div>
+<h2>Ethics</h2>
+<p>Only test what you’re authorized to test.</p>
+
+      <nav class="post-nav">
+        <a rel="prev" href="/posts/">← All Posts</a>
+        <a rel="next" href="/posts/">More →</a>
+      </nav>
+    </div>
+    <aside id="toc" aria-label="Table of contents"></aside>
+  </div>
+</article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Nmap Essentials",
+  "datePublished": "2025-08-10",
+  "dateModified": "2025-08-10",
+  "author": {
+    "@type": "Person",
+    "name": "Umar"
+  },
+  "image": "https://umar-hacks.example/assets/img/nmap-cover.svg",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://umar-hacks.example/posts/nmap-essentials/"
+  },
+  "description": "Post on Umar_Hacks"
+}
+</script>
+
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <nav aria-label="Footer">
+      <a href="/about/">About</a> · <a href="/archives/">Archives</a> · <a href="/tags/">Tags</a>
+    </nav>
+    <small>© <span id="year"></span> Umar_Hacks. Built with HTML, CSS & JS.</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+/* Umar_Hacks — styles.css */
+:root{
+  --bg:#ffffff; --surface:#f6f7f9; --text:#0f172a; --muted:#475569; --border:#e2e8f0;
+  --accent:#2563eb; --accent-contrast:#ffffff; --success:#16a34a; --warn:#d97706; --danger:#dc2626;
+  --shadow:0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
+  --radius:14px;
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem;
+  --space-5:1.5rem; --space-6:2rem; --space-7:3rem;
+  --code-bg:#0b1020; --code-text:#e2e8f0; --code-border:#1f2937;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --step--1: clamp(.85rem, .8rem + .2vw, .95rem);
+  --step-0: clamp(1rem, .9rem + .4vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.1rem + .8vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.2rem + 1.2vw, 1.875rem);
+  --step-3: clamp(2rem, 1.6rem + 1.8vw, 2.5rem);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1020; --surface:#111827; --text:#e5e7eb; --muted:#94a3b8; --border:#1f2937;
+    --accent:#60a5fa; --accent-contrast:#0b1020;
+    --code-bg:#0b1020; --code-text:#e5e7eb; --code-border:#1f2937;
+  }
+}
+*{box-sizing:border-box}
+html{font-family:var(--font); font-size:16px; color:var(--text); background:var(--bg)}
+body{margin:0}
+main{padding: clamp(1rem, 2vw, 2rem)}
+a{color:var(--accent); text-underline-offset:.2em}
+a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+h1{font-size:var(--step-3); line-height:1.15}
+h2{font-size:var(--step-2)}
+h3{font-size:var(--step-1)}
+p,li{font-size:var(--step-0); line-height:1.65; max-width:70ch}
+img{max-width:100%; height:auto; border-radius:12px}
+hr{border:0; border-top:1px solid var(--border); margin:2rem 0}
+.visually-hidden{position:absolute; clip:rect(0 0 0 0); clip-path:inset(50%); width:1px; height:1px; overflow:hidden; white-space:nowrap}
+
+.site-header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(1.2) blur(8px);
+  background: color-mix(in oklab, var(--bg) 85%, transparent);
+  border-bottom:1px solid var(--border); display:flex; align-items:center; gap:1rem; padding:.6rem 1rem}
+.logo{font-weight:700}
+.primary-nav a{padding:.35rem .6rem; border-radius:10px}
+.primary-nav a[aria-current="page"]{background:var(--surface); border:1px solid var(--border)}
+.icon-btn{background:transparent; border:1px solid var(--border); border-radius:10px; padding:.35rem .5rem; cursor:pointer}
+
+.container{max-width:1100px; margin-inline:auto}
+.grid{display:grid; gap:1rem}
+.cards{grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))}
+
+.post-card{display:grid; gap:.5rem; background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--radius); padding:var(--space-4); box-shadow:var(--shadow)}
+.post-card .media img{display:block; width:100%; height:auto; border-radius:12px}
+.tag{font-size:.85em; border:1px solid var(--border); padding:.15rem .45rem; border-radius:999px}
+.meta{display:flex; gap:.35rem; flex-wrap:wrap}
+
+.pagination{display:flex; gap:.4rem; align-items:center; margin-top:1rem}
+.pagination a, .pagination span{border:1px solid var(--border); padding:.35rem .6rem; border-radius:8px}
+.pagination span[aria-current]{background:var(--surface); font-weight:600}
+
+.hero{padding:var(--space-7) 0; display:grid; gap:var(--space-3)}
+.btn{display:inline-block; border:1px solid var(--border); padding:.6rem 1rem; border-radius:12px}
+
+pre{background:var(--code-bg); color:var(--code-text); border:1px solid var(--code-border);
+  border-radius:12px; padding:var(--space-5); overflow:auto; position:relative}
+pre .copy-btn{position:absolute; top:.6rem; right:.6rem; border:1px solid var(--border);
+  background:var(--surface); border-radius:10px; padding:.25rem .5rem; cursor:pointer}
+
+#search-form{display:flex; gap:.5rem; margin:var(--space-5) 0}
+#q{flex:1; padding:.6rem .8rem; border:1px solid var(--border); border-radius:10px; background:var(--surface)}
+.results{display:grid; gap:.75rem; list-style:none; padding:0}
+
+.layout{display:grid; gap:2rem}
+@media(min-width:1000px){ .layout{grid-template-columns: minmax(0,1fr) 300px} }
+.post-nav{display:flex; justify-content:space-between; margin-top:var(--space-6)}
+
+#toc{position:sticky; top:6rem; border:1px solid var(--border); padding:var(--space-4);
+  border-radius:12px; background:var(--surface)}
+#toc a.active{font-weight:600; text-decoration:underline}
+
+.site-footer{border-top:1px solid var(--border); margin-top:2rem; padding:1rem; text-align:center}

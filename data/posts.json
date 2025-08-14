@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Nmap Essentials",
+    "slug": "nmap-essentials",
+    "date": "2025-08-10",
+    "tags": [
+      "networking",
+      "nmap",
+      "recon"
+    ],
+    "summary": "Safe scanning basics, hosts discovery, common flags.",
+    "readingTime": 8,
+    "cover": "/assets/img/nmap-cover.svg",
+    "toc": true,
+    "canonical": "https://umar-hacks.example/posts/nmap-essentials/"
+  },
+  {
+    "title": "Metasploit Basics",
+    "slug": "metasploit-basics",
+    "date": "2025-08-12",
+    "tags": [
+      "metasploit",
+      "exploitation"
+    ],
+    "summary": "From search and modules to sessions and hygiene.",
+    "readingTime": 10,
+    "cover": "/assets/img/msf-cover.svg",
+    "toc": true,
+    "canonical": "https://umar-hacks.example/posts/metasploit-basics/"
+  },
+  {
+    "title": "Wireshark Filters You\u2019ll Actually Use",
+    "slug": "wireshark-filters",
+    "date": "2025-08-14",
+    "tags": [
+      "wireshark",
+      "packet-analysis"
+    ],
+    "summary": "Display filters that speed up your investigations.",
+    "readingTime": 7,
+    "cover": "/assets/img/wireshark-cover.svg",
+    "toc": true,
+    "canonical": "https://umar-hacks.example/posts/wireshark-filters/"
+  }
+]

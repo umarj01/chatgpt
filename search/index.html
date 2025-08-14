@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search — Umar_Hacks</title>
+<meta name="description" content="Search posts on Umar_Hacks.">
+<link rel="canonical" href="https://umar-hacks.example/search/">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+
+<script type="module">
+  import { setActiveNav } from '/assets/js/nav.js';
+  import { setYear } from '/assets/js/footer.js';
+  import { initSearch } from '/assets/js/search.js';
+  import { buildTOC } from '/assets/js/toc.js';
+  import { enableCopy } from '/assets/js/copy.js';
+  import { initTheme } from '/assets/js/theme.js';
+  window.addEventListener('DOMContentLoaded', ()=>{ setActiveNav(); setYear(); initSearch(); buildTOC(); enableCopy(); initTheme(); });
+</script>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:1rem">
+      <a class="logo" href="/">Umar_Hacks</a>
+      <nav aria-label="Primary" class="primary-nav" style="display:flex;gap:.25rem">
+        <a href="/posts/">Posts</a>
+        <a href="/tags/">Tags</a>
+        <a href="/about/">About</a>
+      </nav>
+      <div style="margin-left:auto;display:flex;gap:.5rem;align-items:center">
+        <a class="btn" href="/search/">Search</a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="container" tabindex="-1">
+    
+<h1>Search</h1>
+<form id="search-form" role="search">
+  <label class="visually-hidden" for="q">Search posts</label>
+  <input id="q" name="q" placeholder="Search posts…" autocomplete="off">
+</form>
+<ul id="results" class="results"></ul>
+
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <nav aria-label="Footer">
+      <a href="/about/">About</a> · <a href="/archives/">Archives</a> · <a href="/tags/">Tags</a>
+    </nav>
+    <small>© <span id="year"></span> Umar_Hacks. Built with HTML, CSS & JS.</small>
+  </footer>
+</body>
+</html>
